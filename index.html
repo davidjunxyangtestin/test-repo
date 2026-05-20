@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Application</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Map Application</h1>
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Search location...">
+                <button id="searchBtn">Search</button>
+                <button id="locateBtn">My Location</button>
+            </div>
+        </header>
+        
+        <div id="map"></div>
+        
+        <div class="info-panel">
+            <h3>Map Information</h3>
+            <div id="coordinates">
+                <p><strong>Latitude:</strong> <span id="lat">-</span></p>
+                <p><strong>Longitude:</strong> <span id="lng">-</span></p>
+            </div>
+            <div id="zoom">
+                <p><strong>Zoom Level:</strong> <span id="zoomLevel">-</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
